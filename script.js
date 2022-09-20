@@ -47,6 +47,11 @@ $('#textSize').on('change', function(){
   $("#textResult").css('font-size', size+"px");
 });
 
+$('#textOpacity').on('change', function(){
+  var opacity = $(this).val();
+  $("#textResult").css('opacity', opacity);
+});
+
 $('#shapeColor').on('change', function(){
   var shapeColor = $('#shapeColor').val();
   $("#textResult").css('background', shapeColor);

@@ -102,7 +102,7 @@ select, textarea{
   margin-left: 20px;
 }
 
-.add-image, .choose-color-inner, .add-text, .text-color, .text-size, .shape, .shape-color, .choose-font{
+.gui-group{
   display: flex;
   align-items: center;
   margin-bottom: 20px;

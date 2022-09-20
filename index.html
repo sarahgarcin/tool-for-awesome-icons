@@ -19,18 +19,18 @@
 		<div class="scrollBox">
 			<section>
 				<h2>Background image</h2>
-				<div class="add-image">
+				<div class="add-image gui-group">
 					<label>Image File:</label><br/>
 					<input type="file" id="fileInput" accept="image/jpeg, image/png, image/jpg"/>
 					<!-- save btn -->
 					<button class="btn crop hide">Crop</button>
 				</div>
 				<div class="choose-color">
-					<div class="choose-color-inner">
+					<div class="choose-color-inner gui-group">
 						<label for="imageColor">Image color</label>
 			      <input id="imageColor" name="imageColor" value="#000">
 		    	</div>
-		    	<div class="choose-color-inner">
+		    	<div class="choose-color-inner gui-group">
 		    		<label for="imageColorAfter">Image color n°2</label>
 			    	<input id="imageColorAfter" name="imageColorAfter" value="#FFF">
 			    </div>
@@ -38,11 +38,11 @@
 			</section>
 			<section>
 				<h2>Text setting</h2>
-				<div class="add-text">
+				<div class="add-text gui-group">
 					<label for="iconText">Text</label>
 					<textarea name="iconText" id="iconText"></textarea>
 				</div>
-				<div class="choose-font">
+				<div class="choose-font gui-group">
 					<label for="fonts">Choose a font:</label>
 					<select name="fonts" id="fonts">
 						<option value="monaco" default>Monaco</option>
@@ -52,21 +52,20 @@
 					  <option value="worksans">Work Sans</option>
 					</select> 
 				</div>
-				<div class="text-color">
+				<div class="text-color gui-group">
 					<label for="textColor">Text color</label>
 					<input id="textColor" name="textColor"
 		           value="#000">
 				</div>
-				<div class="text-size">
+				<div class="text-size gui-group">
 					<label for="textSize">Text size</label>
 					  <input type="range" id="textSize" name="textSize"
 	         min="12" max="70" default="30">
-		    	
 				</div>
 			</section>
 			<section>
 				<h2>Let's get fancy</h2>
-				<div class="shape">
+				<div class="shape gui-group">
 					<label for="addShape">Add background shape</label>
 					<select name="addShape" id="addShape">
 						<option value="none" default>None</option>
@@ -75,10 +74,15 @@
 					  <option value="circle">Circle</option>
 					</select> 
 				</div>
-				<div class="shape-color">
+				<div class="shape-color gui-group">
 					<label for="shapeColor">Shape color</label>
 					<input id="shapeColor" name="shapeColor"
 		           value="#FFF">
+				</div>
+				<div class="text-opacity gui-group">
+					<label for="textOpacity">Opacity</label>
+					  <input type="range" id="textOpacity" name="textOpacity"
+	         min="0" max="1" default="1" step="0.1">
 				</div>
 			</section>
 		</div>
