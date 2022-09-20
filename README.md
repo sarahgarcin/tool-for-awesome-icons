@@ -8,7 +8,7 @@
 ## Credits
 The *Tool for awesome icons* was made with Jennifer Gabrys for the research project [Smart Forests](https://www.smartforests.net/), which has received funding from the European Research Council (ERC) under the European Union’s Horizon 2020 research and innovation programme (Grant agreement No. [866006](https://cordis.europa.eu/project/id/866006)).
 
-Design and programming: [Sarah Garcin](https://github.com/sarahgarcin)  
+Design and programming: Sarah Garcin  
 Fonts: Anka Coder by Andrey Makarov, Avara by Raphaël Bastide, Millimetre by Jérémy Landes, Work Sans by Wei Huang
 
 
