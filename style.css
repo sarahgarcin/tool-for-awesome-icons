@@ -1,0 +1,206 @@
+/* load fonts */
+@font-face {
+    font-family: 'anka';
+    src: url('fonts/ankacoder-b-webfont.woff2') format('woff2'),
+        url('fonts/ankacoder-b-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'avara';
+    src: url('fonts/avara-webfont.woff2') format('woff2'),
+        url('fonts/avara-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'millimetre';
+    src: url('fonts/Millimetre-Regular_web.woff2') format('woff2'),
+        url('fonts/Millimetre-Regular_web.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'worksans';
+    src: url('fonts/WorkSans-Bold.woff2') format('woff2'),
+        url('fonts/WorkSans-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'marr';
+    src: url('fonts/marrsans-regular.woff2') format('woff2'),
+        url('fonts/marrsans-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Vars */
+:root{
+  --color-before : transparent;
+  --color-after : transparent;
+}
+
+*{
+  box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+} 
+
+body{
+	margin: 0; 
+  font-size: 16px; 
+  font-family: sans-serif;
+  background: #202020;
+  line-height: 1.2;
+  color: #000;
+  font-family: "anka", sans-serif;
+}
+
+h1{
+  margin-top: 0;;
+  font-weight:normal;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+h2{
+  margin-top: 0;;
+  font-weight:normal;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #000;
+}
+
+section{
+  border-top: 1px solid #000;
+  padding: 30px 0px;
+}
+
+button, input[type="button"]{
+  font-family: "anka";
+  border: 1px solid #000;
+  background: #FFF;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+label{
+  text-transform: uppercase; 
+  font-weight:normal;
+}
+
+input{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.hide{
+  display: none;
+}
+
+#ui-panel{
+  width: 25%;
+  min-width: 200px;
+  background: lightgrey; 
+  height: 100vh;
+  padding: 20px;
+  position: fixed;
+  top: 0; 
+  left:0;
+  overflow: scroll;
+}
+
+
+#canvas-wrapper{
+  width: 70%;
+  margin-left: 30%;
+  height: 100vh;
+  position: relative;
+}
+
+#icon{
+  background: #FFF; 
+  width: 300px; 
+  height: 300px;
+/*  margin-left: calc(50% - 150px);
+  margin-top: calc(50vh - 150px);*/
+/*  position: absolute;
+  top: calc(50vh - 150px); 
+  left: calc(50% - 150px);*/
+  /*border-radius: 20px;*/
+}
+
+.icon-inner{
+  position: relative;
+  width: 300px; 
+  height: 300px;
+}
+
+#textResult{
+  position: absolute; 
+  top: 50%;
+  left:50%;  
+  transform: translate(-50%, -50%); 
+  font-family: Monaco, monospace; 
+  text-align: center;
+  margin:0;
+  font-size: 30px;
+  padding: 20px;
+  pointer-events: none;
+}
+
+#imageResult{
+  width: 300px;
+  height: 300px;
+}
+
+#imageResult::before {
+  background-color: var(--color-before);
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: darken;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+#imageResult::after {
+  background-color: var(--color-after);
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: lighten;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+/*#imageResultBackground{
+  width:300px;
+  height:300px;
+  filter: grayscale(0);
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  mix-blend-mode: hard-light;
+}*/
+
+
+
+
+
+
+
+
+
