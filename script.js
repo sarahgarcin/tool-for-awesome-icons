@@ -1,8 +1,3 @@
-// $('#addTextBtn').on('click', function(){
-//   var textToAdd = $("#iconText").val();
-//   $("#textResult").html(textToAdd);
-// }); 
-
 // color picker init
 $('#imageColor').simpleColor({
   boxWidth: "20px",
@@ -33,10 +28,11 @@ $("#iconText").keyup(function(){
   $("#textResult").html(textToAdd);
 });
 
-// $('#fonts').on('change', function(){
-//   var fontChoosen = $(this).val();
-//   $("#textResult").css('font-family', fontChoosen);
-// }); 
+
+$('#fonts').on('change', function(){
+  var fontChoosen = $(this).val();
+  $("#textResult").css('font-family', fontChoosen);
+}); 
 
 $('#textSize').on('change', function(){
   var size = $(this).val();
@@ -104,14 +100,7 @@ $('#clearBtn').on('click', function(){
 // upload image and crop
 // vars
 let result = document.getElementById('imageResult'),
-// img_result = document.querySelector('.img-result'),
-// img_w = document.querySelector('.img-w'),
-// img_h = document.querySelector('.img-h'),
-// options = document.querySelector('.options'),
 save = document.querySelector('.crop'),
-// cropped = document.querySelector('.cropped'),
-// dwn = document.querySelector('.download'),
-// upload = document.querySelector('#file-input'),
 img,
 cropper = '';
 
@@ -151,28 +140,11 @@ save.addEventListener('click',(e)=>{
     width: 300, 
     height: 300// input value
   }).toDataURL();
-  // remove hide class of img
-  // cropped.classList.remove('hide');
-  // img_result.classList.remove('hide');
   // show image cropped
   result.style.background = "url('"+imgSrc+"') no-repeat";
-  // img.src = imgSrc;
-  // img.classList.remove('cropper-hidden');
   let cropperContainer = document.querySelector('.cropper-container');
   cropperContainer.classList.add('hide');
-  // dwn.classList.remove('hide');
-  // dwn.download = 'imagename.png';
-  // dwn.setAttribute('href',imgSrc);
 });
-
-
-// color image
-// $('#colorImage').on('click', function(){
-//   var colorBefore = $("#imageColor").val();
-//   var colorAfter = $("#imageColorAfter").val();
-//   myFunction_set("--color-before", colorBefore);
-//   myFunction_set("--color-after", colorAfter);
-// });
 
 $('#imageColor').on('change', function(){
   var colorBefore = $("#imageColor").val();

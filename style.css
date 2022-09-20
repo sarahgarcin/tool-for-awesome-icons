@@ -31,13 +31,6 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'marr';
-    src: url('fonts/marrsans-regular.woff2') format('woff2'),
-        url('fonts/marrsans-regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
 
 /* Vars */
 :root{
@@ -128,12 +121,6 @@ input{
   background: #FFF; 
   width: 300px; 
   height: 300px;
-/*  margin-left: calc(50% - 150px);
-  margin-top: calc(50vh - 150px);*/
-/*  position: absolute;
-  top: calc(50vh - 150px); 
-  left: calc(50% - 150px);*/
-  /*border-radius: 20px;*/
 }
 
 .icon-inner{
@@ -185,16 +172,6 @@ input{
   left: 0;
   pointer-events: none;
 }
-
-/*#imageResultBackground{
-  width:300px;
-  height:300px;
-  filter: grayscale(0);
-  position: absolute;
-  top: 0;
-  z-index: 10;
-  mix-blend-mode: hard-light;
-}*/
 
 
 
