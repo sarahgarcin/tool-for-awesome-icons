@@ -1,6 +1,6 @@
 # Tool for awesome icons 
 
-*Tool for awesome icons* is a small, easy-to-use web tool for creating square icons. It was developed for the research project [Smart Forests](https://www.smartforests.net/)
+*Tool for awesome icons* is a small, easy-to-use web tool for creating square icons. It was developed  to create podcast icons for the research project [Smart Forests](https://www.smartforests.net/)
 
 [Demo](http://site.sarahgarcin.com/tool-for-awesome-icons/)
 
