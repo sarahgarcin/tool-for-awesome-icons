@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Podcast Icon Generator</title>
+	<title>Tool for Awesome Icons</title>
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropper/2.3.4/cropper.min.css">
 	<link rel="stylesheet" href="style.css">
@@ -13,72 +13,76 @@
 <body>
 
 	<div id="ui-panel">
-		<h1>Podcast Icon Generator</h1>
-		<section>
-			<h2>Background image</h2>
-			<div class="add-image">
-				<label>Image File:</label><br/>
-				<input type="file" id="fileInput" accept="image/jpeg, image/png, image/jpg"/>
-				<!-- save btn -->
-				<button class="btn crop hide">Crop</button>
-			</div>
-			<div class="choose-color">
-				<div class="choose-color-inner">
-					<label for="imageColor">Image color</label>
-		      <input id="imageColor" name="imageColor" value="#000">
-	    	</div>
-	    	<div class="choose-color-inner">
-	    		<label for="imageColorAfter">Image color n°2</label>
-		    	<input id="imageColorAfter" name="imageColorAfter" value="#FFF">
-		    </div>
-			</div>
-		</section>
-		<section>
-			<h2>Text setting</h2>
-			<div class="add-text">
-				<label for="iconText">Text</label>
-				<textarea name="iconText" id="iconText"></textarea>
-			</div>
-			<div class="choose-font">
-				<label for="fonts">Choose a font:</label>
-				<select name="fonts" id="fonts">
-					<option value="monaco" default>Monaco</option>
-				  <option value="anka">Anka</option>
-				  <option value="avara">Avara</option>
-				  <option value="millimetre">Millimetre</option>
-				  <option value="worksans">Work Sans</option>
-				</select> 
-			</div>
-			<div class="text-color">
-				<label for="textColor">Text color</label>
-				<input id="textColor" name="textColor"
-	           value="#000">
-			</div>
-			<div class="text-size">
-				<label for="textSize">Text size</label>
-				  <input type="range" id="textSize" name="textSize"
-         min="12" max="70" default="30">
-	    	
-			</div>
-		</section>
-		<section>
-			<h2>Let's get fancy</h2>
-			<div class="shape">
-				<label for="addShape">Add background shape</label>
-				<select name="addShape" id="addShape">
-					<option value="none" default>None</option>
-				  <option value="square">Square</option>
-				  <option value="rounded">Rounded</option>
-				  <option value="circle">Circle</option>
-				</select> 
-			</div>
-			<div class="shape-color">
-				<label for="shapeColor">Shape color</label>
-				<input id="shapeColor" name="shapeColor"
-	           value="#FFF">
-			</div>
-		</section>
-		<section>
+		<div class="topPanel">
+			<h1>Tool for Awesome Icons</h1>
+		</div>
+		<div class="scrollBox">
+			<section>
+				<h2>Background image</h2>
+				<div class="add-image">
+					<label>Image File:</label><br/>
+					<input type="file" id="fileInput" accept="image/jpeg, image/png, image/jpg"/>
+					<!-- save btn -->
+					<button class="btn crop hide">Crop</button>
+				</div>
+				<div class="choose-color">
+					<div class="choose-color-inner">
+						<label for="imageColor">Image color</label>
+			      <input id="imageColor" name="imageColor" value="#000">
+		    	</div>
+		    	<div class="choose-color-inner">
+		    		<label for="imageColorAfter">Image color n°2</label>
+			    	<input id="imageColorAfter" name="imageColorAfter" value="#FFF">
+			    </div>
+				</div>
+			</section>
+			<section>
+				<h2>Text setting</h2>
+				<div class="add-text">
+					<label for="iconText">Text</label>
+					<textarea name="iconText" id="iconText"></textarea>
+				</div>
+				<div class="choose-font">
+					<label for="fonts">Choose a font:</label>
+					<select name="fonts" id="fonts">
+						<option value="monaco" default>Monaco</option>
+					  <option value="anka">Anka</option>
+					  <option value="avara">Avara</option>
+					  <option value="millimetre">Millimetre</option>
+					  <option value="worksans">Work Sans</option>
+					</select> 
+				</div>
+				<div class="text-color">
+					<label for="textColor">Text color</label>
+					<input id="textColor" name="textColor"
+		           value="#000">
+				</div>
+				<div class="text-size">
+					<label for="textSize">Text size</label>
+					  <input type="range" id="textSize" name="textSize"
+	         min="12" max="70" default="30">
+		    	
+				</div>
+			</section>
+			<section>
+				<h2>Let's get fancy</h2>
+				<div class="shape">
+					<label for="addShape">Add background shape</label>
+					<select name="addShape" id="addShape">
+						<option value="none" default>None</option>
+					  <option value="square">Square</option>
+					  <option value="rounded">Rounded</option>
+					  <option value="circle">Circle</option>
+					</select> 
+				</div>
+				<div class="shape-color">
+					<label for="shapeColor">Shape color</label>
+					<input id="shapeColor" name="shapeColor"
+		           value="#FFF">
+				</div>
+			</section>
+		</div>
+		<section class="download-clear">
 			<div class="download">
 				<button id="downloadLnk">Download as image</button>
 			</div>

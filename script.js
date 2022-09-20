@@ -1,26 +1,34 @@
 // color picker init
 $('#imageColor').simpleColor({
-  boxWidth: "20px",
+  boxWidth: "30px",
+  boxHeight: "30px",
   cellWidth: 12,
   cellHeight: 12,
+  columns:13
 });
 
 $('#imageColorAfter').simpleColor({
-  boxWidth: "20px",
+  boxWidth: "30px",
+  boxHeight: "30px",
   cellWidth: 12,
   cellHeight: 12,
+  columns:13
 });
 
 $('#textColor').simpleColor({
-  boxWidth: "20px",
+  boxWidth: "30px",
+  boxHeight: "30px",
   cellWidth: 12,
   cellHeight: 12,
+  columns:13
 });
 
 $('#shapeColor').simpleColor({
-  boxWidth: "20px",
+  boxWidth: "30px",
+  boxHeight: "30px",
   cellWidth: 12,
   cellHeight: 12,
+  columns:13
 });
 
 $("#iconText").keyup(function(){
@@ -35,8 +43,7 @@ $('#fonts').on('change', function(){
 }); 
 
 $('#textSize').on('change', function(){
-  var size = $(this).val();
-  console.log(size);
+  var size = $(this).val() * 5;
   $("#textResult").css('font-size', size+"px");
 });
 
@@ -51,21 +58,21 @@ $('#addShape').on('change', function(){
   if(shapeChoosen == "square"){
     $("#textResult").css({
       'background' : shapeColor,
-      'padding' : "10px",
+      'padding' : "calc(20px * 5)",
       'border-radius' : "0px"  
     });
   }
   else if(shapeChoosen == "rounded"){
     $("#textResult").css({
       'background' : shapeColor,
-      'padding' : "10px", 
+      'padding' : "calc(20px * 5)", 
       'border-radius' : "20px" 
     });
   }
   else if(shapeChoosen == "circle"){
     $("#textResult").css({
       'background' : shapeColor,
-      'padding' : "20px 30px", 
+      'padding' : "calc(30px * 5) calc(30px * 5)", 
       'border-radius' : "50%" 
     });
   }
@@ -81,13 +88,16 @@ $('#addShape').on('change', function(){
 
 
 $('#downloadLnk').on('click', function(){
-  domtoimage.toJpeg(document.getElementById('icon'), { quality: 1 })
+  $('#icon').css("transform", "scale(1)");
+  domtoimage.toJpeg(document.getElementById('icon'), { quality: 0.9 })
   .then(function (dataUrl) {
       var link = document.createElement('a');
       link.download = $("#iconText").val() + '.jpg';
       link.href = dataUrl;
       link.click();
+      $('#icon').css("transform", "scale(0.2)");
   }); 
+  
 
 });
 
@@ -137,8 +147,8 @@ save.addEventListener('click',(e)=>{
   e.preventDefault();
   // get result to data uri
   let imgSrc = cropper.getCroppedCanvas({
-    width: 300, 
-    height: 300// input value
+    width: 1400, 
+    height: 1400// input value
   }).toDataURL();
   // show image cropped
   result.style.background = "url('"+imgSrc+"') no-repeat";
